@@ -19,8 +19,31 @@ async function tripAdditionController(req,res){
 
     }catch(error){
         console.error('ERROR')
-
+        res.send('Something went Wrong')
     }   
 }
 
-module.exports = { tripAdditionController }
+async function getTripDetailsController(req,res){
+    try{
+        tripModel.Trip.find({})
+        .then(doc => res.send(doc))
+        .catch(err => res.send('SOMETHING WENT WRONG'))
+    }catch(error){
+        console.error('ERROR')
+        res.send('Something went Wrong')
+    }
+}
+
+async function getTripDetailsByIdController(req,res){
+    try{
+        tripModel.Trip.findById(req.params.id)
+        .then(doc => res.send(doc))
+        .catch(err => res.send('SOMETHING WENT WRONG'))
+
+    }catch(error){
+        console.error('ERROR')
+        res.send('Something went Wrong')
+    }
+}
+
+module.exports = { tripAdditionController, getTripDetailsController, getTripDetailsByIdController }
