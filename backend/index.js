@@ -1,4 +1,6 @@
 const express = require('express')
+const cors = require('cors');
+
 require('dotenv').config()
 
 const conn = require('./conn')
@@ -9,6 +11,7 @@ const app = express()
 const tripRoutes = require('./routes/trip.routes')
 
 app.use(express.json())
+app.use(cors());
 
 
 app.use('/trip', tripRoutes)

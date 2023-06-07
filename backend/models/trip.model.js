@@ -35,6 +35,12 @@ const tripSchema = mongoose.Schema({
         type: String,
         enum: ['backpacking', 'leisure', 'business']
     },
+    featured:{
+        type:Boolean
+    },
+    shortDesc:{
+        type: String
+    },
     createdAt: {
         type: Date,
         default: Date.now()

@@ -12,7 +12,9 @@ async function tripAdditionController(req,res){
             totalCost: req.body.totalCost,
             experience: req.body.experience,
             image: req.body.image,
-            tripType: req.body.tripType
+            tripType: req.body.tripType,
+            featured: req.body.featured,
+            shortDesc: req.body.shortDesc
         })
         await tripDetail.save()
         res.send('Trip added successfully')           
