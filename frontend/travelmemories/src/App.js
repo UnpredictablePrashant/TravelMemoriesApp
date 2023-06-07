@@ -1,4 +1,5 @@
 import './App.css';
+import Header from './components/UIC/Header';
 import AddExperience from './components/pages/AddExperience';
 import ExperienceDetails from './components/pages/ExperienceDetails';
 import Home from './components/pages/Home';
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
+    <Header></Header>
     <RouterProvider router={router} />
     </>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../UIC/Header";
 import Cards from "../UIC/Cards";
 import FeaturedCard from "../UIC/FeaturedCard";
 import { useEffect, useState } from "react";
@@ -15,7 +14,6 @@ export default function Home() {
   if (data) {
     return (
       <div>
-        <Header></Header>
         <div style={{ margin: "2%" }}>
           {data.map((e) => {
             if (e.featured) {
