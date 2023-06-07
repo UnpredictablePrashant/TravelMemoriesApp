@@ -26,6 +26,8 @@ export default function Home() {
                   description={e.shortDesc}
                 ></FeaturedCard>
               );
+            }else{
+              return null
             }
           })}
 
@@ -38,6 +40,8 @@ export default function Home() {
                   description={e.shortDesc}
                 ></Cards>
               );
+            }else{
+              return null
             }
           })}
         </div>
