@@ -1,6 +1,9 @@
 import React from "react";
 
 export default function Cards(props) {
+  const visitDetails = () => {
+    
+  }
   return (
     <div style={{marginBottom: "2%", marginTop: "2%"}}>
       <div class="card" style={{width: "10%;"}}>
@@ -10,9 +13,9 @@ export default function Cards(props) {
           <p class="card-text">
             {props.description}
           </p>
-          <a href={props.link} class="card-link">
+          <button onClick={visitDetails} class="card-link">
             More Details
-          </a>
+          </button>
         </div>
       </div>
     </div>
