@@ -5,7 +5,7 @@ export default function ExperienceDetails(props) {
     <div style={{ margin: "2%" }}>
       <div class="row">
         <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-8" style={{textAlign: "center"}}>
           <h1>Switzerland Trip</h1>
         </div>
         <div class="col-2"></div>
@@ -13,8 +13,8 @@ export default function ExperienceDetails(props) {
 
       <div class="row">
         <div class="col-2"></div>
-        <div class="col-8">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNiaiKoyZjrkjs_ENa9fsKNvelTVDOurTFWxhvsV_8&s"></img>
+        <div class="col-8" style={{textAlign: "center"}}>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNiaiKoyZjrkjs_ENa9fsKNvelTVDOurTFWxhvsV_8&s" alt="meaning"></img>
         </div>
         <div class="col-2"></div>
       </div>
