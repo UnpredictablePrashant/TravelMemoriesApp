@@ -22,6 +22,7 @@ export default function Home() {
                   title={e.tripName}
                   subtitle={e.tripType}
                   description={e.shortDesc}
+                  id={e._id}
                 ></FeaturedCard>
               );
             }else{
@@ -36,6 +37,7 @@ export default function Home() {
                   title={e.tripName}
                   subtitle={e.tripType}
                   description={e.shortDesc}
+                  id={e._id}
                 ></Cards>
               );
             }else{

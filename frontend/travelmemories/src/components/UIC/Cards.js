@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function Cards(props) {
+export default function Cards(props) {  
+  const navigate = useNavigate();
   const visitDetails = () => {
-    
+    navigate(`/experiencedetails/${props.id}`)
   }
   return (
     <div style={{marginBottom: "2%", marginTop: "2%"}}>
