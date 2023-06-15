@@ -3,12 +3,13 @@ import Cards from "../UIC/Cards";
 import FeaturedCard from "../UIC/FeaturedCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { baseUrl } from "../../url-config";
 
 export default function Home() {
   const [data, setData] = useState();
 
   useEffect(() => {
-    axios.get("http://localhost:3001/trip/").then((res) => setData(res.data));
+    axios.get(`${baseUrl}/trip/`).then((res) => setData(res.data));
   }, []);
   console.log(data);
   if (data) {

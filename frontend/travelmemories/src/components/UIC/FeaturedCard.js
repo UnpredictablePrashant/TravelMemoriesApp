@@ -7,7 +7,7 @@ export default function FeaturedCard(props) {
     navigate(`/experiencedetails/${props.id}`)
   }
   return (
-    <div>
+    <div  style={{marginBottom: "2%", marginTop: "2%"}}>
       <div class="card">
         <div class="card-header">Featured</div>
         <div class="card-body">

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { baseUrl } from "../../url-config";
 
 export default function ExperienceDetails(props) {
   const { id } = useParams();
@@ -8,7 +9,7 @@ export default function ExperienceDetails(props) {
 
   useEffect(() => {    
     axios
-      .get(`http://localhost:3001/trip/${id}`)
+      .get(`${baseUrl}/trip/${id}`)
       .then((val) => setVal(val.data));
   }, [id]);
   if (val) {

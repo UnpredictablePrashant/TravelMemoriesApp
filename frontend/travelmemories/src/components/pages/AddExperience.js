@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { baseUrl } from "../../url-config";
 
 export default function AddExperience() {
   const [formdata, setFormdata] = useState({
@@ -17,7 +18,7 @@ export default function AddExperience() {
   })
   const submitForm = () => {
     console.log(formdata)
-    axios.post('http://localhost:3001/trip', formdata)
+    axios.post(`${baseUrl}/trip`, formdata)
   }
 
   return (
@@ -70,8 +71,9 @@ export default function AddExperience() {
               </label>
               <select class="form-select" aria-label="tripType" id="tripType" value={formdata.tripType} onChange={(e) => setFormdata({...formdata, tripType: e.target.value})}>
                 <option selected value="backpacking">
-                  Backpacking
+                  Select One
                 </option>
+                <option value="backpacking">Backpacking</option>
                 <option value="leisure">Leisure</option>
                 <option value="business">Business</option>
               </select>
